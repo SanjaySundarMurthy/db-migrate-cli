@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "db-migrate-cli"
+version = "1.0.0"
+description = "Database schema migration runner with drift detection, version tracking, and rollback support."
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.9"
+authors = [{name = "Sanjay Sundar Murthy"}]
+keywords = ["database", "migration", "schema", "drift-detection", "devops"]
+dependencies = [
+    "click>=8.0.0",
+    "rich>=13.0.0",
+    "pyyaml>=6.0",
+]
+
+[project.scripts]
+db-migrate-cli = "db_migrate_cli.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["db_migrate_cli*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
