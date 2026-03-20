@@ -60,3 +60,9 @@ Terminal (Rich), JSON, HTML
 ## License
 
 MIT
+
+---
+
+## Author
+
+**Sanjay S** — [GitHub](https://github.com/SanjaySundarMurthy)
