@@ -7,7 +7,7 @@ RUN pip install --no-cache-dir build && python -m build
 FROM python:3.12-slim
 
 LABEL maintainer="ssan" \
-      org.opencontainers.image.source="https://github.com/ssan/db-migrate-cli" \
+      org.opencontainers.image.source="https://github.com/SanjaySundarMurthy/db-migrate-cli" \
       org.opencontainers.image.description="db-migrate-cli - DevOps CLI Tool"
 
 RUN groupadd -r appuser && useradd -r -g appuser appuser
