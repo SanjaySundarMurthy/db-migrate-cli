@@ -17,6 +17,12 @@ dependencies = [
     "pyyaml>=6.0",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "ruff>=0.4",
+]
+
 [project.scripts]
 db-migrate-cli = "db_migrate_cli.cli:main"
 
@@ -26,3 +32,10 @@ include = ["db_migrate_cli*"]
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 pythonpath = ["."]
+
+[tool.ruff]
+target-version = "py39"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
