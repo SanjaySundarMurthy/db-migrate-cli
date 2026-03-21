@@ -1,4 +1,8 @@
-# 🗄️ db-migrate-cli
+﻿# 🗄️ db-migrate-cli
+
+[![CI](https://github.com/SanjaySundarMurthy/db-migrate-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/SanjaySundarMurthy/db-migrate-cli/actions/workflows/ci.yml)
+[![Python](https://img.shields.io/pypi/pyversions/db-migrate-cli)](https://pypi.org/project/db-migrate-cli/)
+[![PyPI](https://img.shields.io/pypi/v/db-migrate-cli)](https://pypi.org/project/db-migrate-cli/)
 
 **Database Schema Migration Runner with Drift Detection**
 
@@ -19,7 +23,7 @@ A Python CLI tool that manages database migrations, detects schema drift between
 ```bash
 git clone https://github.com/sanjaysundarmurthy/db-migrate-cli.git
 cd db-migrate-cli
-pip install -e .
+pip install db-migrate-cli
 ```
 
 ## Quick Start
@@ -66,3 +70,50 @@ MIT
 ## Author
 
 **Sanjay S** — [GitHub](https://github.com/SanjaySundarMurthy)
+
+
+## 🐳 Docker
+
+Run without installing Python:
+
+```bash
+# Build the image
+docker build -t db-migrate-cli .
+
+# Run
+docker run --rm db-migrate-cli --help
+
+# Example with volume mount
+docker run --rm -v ${PWD}:/workspace db-migrate-cli [command] /workspace
+```
+
+Or pull from the container registry:
+
+```bash
+docker pull ghcr.io/SanjaySundarMurthy/db-migrate-cli:latest
+docker run --rm ghcr.io/SanjaySundarMurthy/db-migrate-cli:latest --help
+```
+
+## 🤝 Contributing
+
+Contributions are welcome! Here's how:
+
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+Please ensure tests pass before submitting:
+
+```bash
+pip install db-migrate-cli
+pytest -v
+ruff check .
+```
+
+## 🔗 Links
+
+- **PyPI**: [https://pypi.org/project/db-migrate-cli/](https://pypi.org/project/db-migrate-cli/)
+- **GitHub**: [https://github.com/SanjaySundarMurthy/db-migrate-cli](https://github.com/SanjaySundarMurthy/db-migrate-cli)
+- **Issues**: [https://github.com/SanjaySundarMurthy/db-migrate-cli/issues](https://github.com/SanjaySundarMurthy/db-migrate-cli/issues)
